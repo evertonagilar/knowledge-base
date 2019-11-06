@@ -1,0 +1,26 @@
+image: ufsm/ufsm-maven:latest
+
+stages:
+  - deploy
+  
+variables:
+  KUBECTL_NAMESPACE: "default"
+  DEPLOY_PATH: "/srv/jekyll"
+  CNAME: "172.16.0.241:4000/"  
+  
+deploy site:
+  stage: deploy
+  script:
+    - mkdir -p /root/.kube
+    - cat "$KUBECTL_CONFIG" > /root/.kube/config
+    # Pega o id do container no Kubernetes para o ufsm-glassfish-dev1
+    - ID_CONTAINER=$(/var/opt/kubectl --namespace=$KUBECTL_NAMESPACE get pod | grep ufsm-glassfish-dev1 | cut -d' ' -f1)
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp src $ID_CONTAINER:$DEPLOY_PATH
+  environment:
+    name: develop
+    url: http://${CNAME}
+
+
+
+
+    
