@@ -15,7 +15,9 @@ deploy site:
     - cat "$KUBECTL_CONFIG" > /root/.kube/config
     # Pega o id do container no Kubernetes para o ufsm-glassfish-dev1
     - ID_CONTAINER=$(/var/opt/kubectl --namespace=$KUBECTL_NAMESPACE get pod | grep ufsm-glassfish-dev1 | cut -d' ' -f1)
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp src $ID_CONTAINER:$DEPLOY_PATH
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE exec rm -rf $ID_CONTAINER:$DEPLOY_PATH
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp src $ID_CONTAINER:/tmp
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE exec $ID_CONTAINER mv /tmp/src $DEPLOY_PATH/
   environment:
     name: develop
     url: http://${CNAME}
