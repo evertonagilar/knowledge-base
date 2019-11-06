@@ -1,0 +1,65 @@
+{
+  "kind": "Deployment",
+  "apiVersion": "extensions/v1beta1",
+  "metadata": {
+    "name": "knowledge-base",
+    "namespace": "default",
+    "labels": {
+      "name": "knowledge-base"
+    },
+    "annotations": {
+      "deployment.kubernetes.io/revision": "4"
+    }
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "matchLabels": {
+        "name": "knowledge-base"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "name": "knowledge-base"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "knowledge-base",
+            "image": "jekyll/jekyll:3.8",
+            "command": ["jekyll", "serve"],
+            "ports": [
+              {
+                "containerPort": 4000,
+                "protocol": "TCP"
+              }
+            ],
+            "resources": {},
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "Always",
+            "stdin": true,
+            "tty": true
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "securityContext": {},
+        "schedulerName": "default-scheduler"
+      }
+    },
+    "strategy": {
+      "type": "RollingUpdate",
+      "rollingUpdate": {
+        "maxUnavailable": 1,
+        "maxSurge": 1
+      }
+    },
+    "revisionHistoryLimit": 10,
+    "progressDeadlineSeconds": 600
+  }
+  
+}

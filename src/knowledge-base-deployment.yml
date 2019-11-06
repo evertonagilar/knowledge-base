@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: knowledge-base
+  labels:
+    app: knowledge-base
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: knowledge-base
+  template:
+    metadata:
+      labels:
+        app: knowledge-base
+    spec:
+      containers:
+      - name: knowledge-base
+        image: jekyll/jekyll
+        ports:
+        - containerPort: 4000
+        
