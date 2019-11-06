@@ -5,7 +5,7 @@ stages:
   
 variables:
   KUBECTL_NAMESPACE: "default"
-  DEPLOY_PATH: "/srv/jekyll"
+  DEPLOY_PATH: "/srv/"
   CNAME: "172.16.0.241:4000/"  
   
 deploy site:
@@ -18,7 +18,7 @@ deploy site:
     - mv src jekyll
     - ls -l
     - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp jekyll $ID_CONTAINER:$DEPLOY_PATH
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp jekyll $ID_CONTAINER:/tmp/oi_pasta
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp jekyll $ID_CONTAINER:/tmp/
     - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE exec  $ID_CONTAINER ls  /tmp
   environment:
     name: develop
