@@ -16,9 +16,10 @@ deploy site:
     # Pega o id do container no Kubernetes para o ufsm-glassfish-dev1
     - ID_CONTAINER=$(/var/opt/kubectl --namespace=$KUBECTL_NAMESPACE get pod | grep ufsm-glassfish-dev1 | cut -d' ' -f1)
     - mv src jekyll
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp jekyll/ $ID_CONTAINER:$DEPLOY_PATH
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp jekyll/ $ID_CONTAINER:/tmp/oi_pasta
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE exec  $ID_CONTAINER ls 
+    - mv ls -l
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp jekyll $ID_CONTAINER:$DEPLOY_PATH
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp jekyll $ID_CONTAINER:/tmp/oi_pasta
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE exec  $ID_CONTAINER ls  /tmp
   environment:
     name: develop
     url: http://${CNAME}
