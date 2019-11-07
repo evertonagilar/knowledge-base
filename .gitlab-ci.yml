@@ -13,8 +13,9 @@ deploy site:
   script:
     - mkdir -p /root/.kube
     - cat "$KUBECTL_CONFIG" > /root/.kube/config
-    - kubectl --namespace=$KUBECTL_NAMESPACE delete -f knowledge-base-deployment.yml
-    - kubectl --namespace=$KUBECTL_NAMESPACE create -f knowledge-base-deployment.yml
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE delete -f knowledge-base-deployment.yml
+    - sleep 10
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE create -f knowledge-base-deployment.yml
   environment:
     name: develop
     url: http://${CNAME}
