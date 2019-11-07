@@ -29,6 +29,7 @@
           {
             "name": "knowledge-base",
             "image": "ufsm/ufsm-knowledge-base",
+            "command" : 
             "ports": [
               {
                 "containerPort": 4000,

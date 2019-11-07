@@ -10,7 +10,7 @@ RUN chmod +x /var/opt/entrypoint.sh && \
 	chmod -R 400 /root/.ssh
 
 
-ENTRYPOINT ["/var/opt/entrypoint.sh", "jekyll", "serve"]
+ENTRYPOINT ["/var/opt/entrypoint.sh"]
 
 
 
