@@ -23,4 +23,5 @@ echo '200.132.39.65 alpha.cpd.ufsm.br' 		>> /etc/hosts
 echo -e "\033[00;37mServidor da base de conhecimento do \033[01;34mCPD/UFSM\033[01;37m"
 cd /var/opt/knowledge-base
 git pull
+cd src
 jekyll serve
