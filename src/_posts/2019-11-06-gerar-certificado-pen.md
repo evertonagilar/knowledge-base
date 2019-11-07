@@ -24,4 +24,4 @@ sudo openssl req -new  -key ~/desenvolvimento/chave/UFSM-PEN-PRODUCAO.key -out  
 
 ## Abrir chamado no OTRS para CPD/Suporte/Identidade e anexar o arquivo CSR
 
-Responsável o suporte: Carlos Roberto Grieco de Moraes
+Responsável no suporte: Carlos Roberto Grieco de Moraes
