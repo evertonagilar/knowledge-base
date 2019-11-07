@@ -7,7 +7,7 @@ description: "Como atualizar o Java em produção"
 type: Document
 ---
 
-Seguem os passos que a gente fez na atualização do java:
+Seguem os passos para atualizar o Java em produção:
 
 ## Download da última versão do Oracle Java 8 JDK em .tar.gz
 
