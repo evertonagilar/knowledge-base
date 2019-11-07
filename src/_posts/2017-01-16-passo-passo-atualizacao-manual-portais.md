@@ -1,32 +1,44 @@
 ---
 date: 2017-01-16
-title: Atualizar portais web
+title: Atualizar portais web manualmente
 categories:
   - Deployment
 description: "Passo a passo para atualização manual dos portais web"
 type: Document
 ---
-Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.
+Embora o processo de atualização dos portais esteja caminhando para ser automático com o GitLab, este tutorial demonstra passo a passo os procedimentos que são realizados.
 
-If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:
 
-## How to install
+## Criar tarefa no OTRS e associar todas as tarefas a serem implantadas
 
-~~~ bash
-# Install Jekyll and Bundler gems through RubyGems
-~ $ gem install jekyll bundler
+Processo: CPD::NOC::Requisição de mudança
+Assunto: Atualização dos portais
+Texto: Atualização semanal dos portais
+Associar as tarefas que serão implantadas a esta nova tarefa (Outros >> Associar)
+    
 
-# Create a new Jekyll site at ./myblog
-~ $ jekyll new myblog
+## Listar tarefas de implantação java no OTRS
 
-# Change into your new directory
-~ $ cd myblog
+## Abrir o Project Builder
 
-# Build the site on the preview server
-~/myblog $ bundle exec jekyll serve
+## Após configurado, você verá a lista de tags (por padrão). Linhas em negrito indicam tag feita nos últimos 5 dias.
 
-# Now browse to http://localhost:4000
-~~~
+## Se tudo ocorreu bem (Tudo verde), a pasta "Destino da coleta" conterá todos os artefatos de implantação.
+
+## Será necessário atualizar:
+
+## Atualizando a edge:
+
+## Antes de atualizar as portais:
+
+## Atualizando a wportal03 (200.18.33.142):
+
+## Antes de atualizar a wportal02:
+
+## Atualizando a wportal02 (200.18.33.117):
+
+## Finalizando...
+
 
 ## Next steps
 

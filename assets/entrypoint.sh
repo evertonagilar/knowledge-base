@@ -28,4 +28,5 @@ echo 'Fazendo download do projeto...'
 git clone -q --depth 1 https://evertonagilar:$GIT_PASSWD@alpha.cpd.ufsm.br/desenvolvimento/knowledge-base
 echo 'Entrando no projeto'
 cd knowledge-base/src
+crond
 jekyll serve
