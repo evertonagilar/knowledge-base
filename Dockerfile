@@ -8,7 +8,7 @@ ADD assets/.ssh					/root/.ssh
 
 RUN chmod +x /var/opt/entrypoint.sh && \
 	chmod -R 400 /root/.ssh && \
-	echo '*/1	*	*	*	*	/var/opt/update.sh' >> /etc/crontabs/root 
+	echo '*/1	*	*	*	*	/var/opt/update.sh && sleep 30 && /var/opt/update.sh' >> /etc/crontabs/root
 
 ENTRYPOINT ["/var/opt/entrypoint.sh"]
 
