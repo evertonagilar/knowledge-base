@@ -11,6 +11,7 @@ variables:
 deploy site:
   stage: deploy
   script:
+    - ./build.sh
     - mkdir -p /root/.kube
     - cat "$KUBECTL_CONFIG" > /root/.kube/config
     - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE scale deployment knowledge-base --replicas=0
