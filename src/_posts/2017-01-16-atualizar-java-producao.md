@@ -11,6 +11,8 @@ Seguem os passos que a gente fez na atualização do java:
 
 ## Download da última versão do Oracle Java 8 JDK em .tar.gz
 
+Link download: https://www.oracle.com/technetwork/pt/java/javase/downloads
+
 ## Descompactar o arquivo em /opt
 
 ~~~ bash
