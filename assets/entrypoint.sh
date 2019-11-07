@@ -24,6 +24,8 @@ echo -e "\033[00;37mServidor da base de conhecimento do \033[01;34mCPD/UFSM\033[
 cd /var/opt
 #git clone -q --depth 'https://evertonagilar:unb960101$$$@alpha.cpd.ufsm.br/desenvolvimento/knowledge-base'
 GIT_PASSWD='unb960101$$$'
+echo 'Fazendo download do projeto...'
 git clone -q --depth 1 https://evertonagilar:$GIT_PASSWD@alpha.cpd.ufsm.br/desenvolvimento/knowledge-base
+echo 'Entrando no projeto'
 cd knowledge-base/src
 jekyll serve
