@@ -13,12 +13,8 @@ deploy site:
   script:
     - mkdir -p /root/.kube
     - cat "$KUBECTL_CONFIG" > /root/.kube/config
-    # Pega o id do container no Kubernetes para o ufsm-glassfish-dev1
-    - ID_CONTAINER=$(/var/opt/kubectl --namespace=$KUBECTL_NAMESPACE get pod | grep ufsm-glassfish-dev1 | cut -d' ' -f1)
+    - ID_CONTAINER=$(/var/opt/kubectl --namespace=$KUBECTL_NAMESPACE get pod | grep knowledge-base | cut -d' ' -f1)
     - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE delete pod $ID_CONTAINER
-    #- /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE scale deployment knowledge-base --replicas=0
-    #- sleep 10
-    #- /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE scale deployment knowledge-base --replicas=1
   environment:
     name: knowledge-base
     url: http://${CNAME}
