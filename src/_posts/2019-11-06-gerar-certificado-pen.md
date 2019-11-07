@@ -3,7 +3,7 @@ date: 2019-11-06
 title: Gerar certificado ICP-Brasil barramento PEN
 video_id: 42vlM8bvrtk
 categories:
-  - Suporte
+  - Desenvolvimento
 description: "Como gerar um certificado ICP-Brasil para o barramento PEN"
 type: Video
 ---
