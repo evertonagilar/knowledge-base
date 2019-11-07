@@ -13,10 +13,8 @@ deploy site:
   script:
     - mkdir -p /root/.kube
     - cat "$KUBECTL_CONFIG" > /root/.kube/config
-    # Pega o id do container no Kubernetes para o ufsm-glassfish-dev1
-    - ID_CONTAINER=$(/var/opt/kubectl --namespace=$KUBECTL_NAMESPACE get pod | grep knowledge-base | cut -d' ' -f1)
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE cp src $ID_CONTAINER:/tmp
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE exec $ID_CONTAINER cp -r /tmp/srv/* /srv/jekyll/
+    - kubectl --namespace=$KUBECTL_NAMESPACE delete -f knowledge-base-deployment.yml
+    - kubectl --namespace=$KUBECTL_NAMESPACE create -f knowledge-base-deployment.yml
   environment:
     name: develop
     url: http://${CNAME}

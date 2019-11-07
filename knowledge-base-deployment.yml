@@ -28,8 +28,7 @@
         "containers": [
           {
             "name": "knowledge-base",
-            "image": "jekyll/jekyll:3.8",
-            "command": ["jekyll", "serve"],
+            "image": "ufsm/ufsm-knowledge-base",
             "ports": [
               {
                 "containerPort": 4000,
