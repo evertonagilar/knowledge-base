@@ -22,6 +22,8 @@ echo '200.132.39.65 alpha.cpd.ufsm.br' 		>> /etc/hosts
 
 echo -e "\033[00;37mServidor da base de conhecimento do \033[01;34mCPD/UFSM\033[01;37m"
 cd /var/opt
-git clone 'https://evertonagilar:unb960101$$$@alpha.cpd.ufsm.br/desenvolvimento/knowledge-base'
+#git clone -q --depth 'https://evertonagilar:unb960101$$$@alpha.cpd.ufsm.br/desenvolvimento/knowledge-base'
+GIT_PASSWD=unb960101$$$
+git clone -q --depth 1 https://evertonagilar:$GIT_PASSWD@alpha.cpd.ufsm.br/desenvolvimento/knowledge-base
 cd knowledge-base/src
 jekyll serve
