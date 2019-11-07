@@ -13,11 +13,10 @@ deploy site:
   script:
     - mkdir -p /root/.kube
     - cat "$KUBECTL_CONFIG" > /root/.kube/config
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE delete -f knowledge-base-deployment.yml
-    - sleep 10
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE create -f knowledge-base-deployment.yml
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE scale deployment ufsm-glassfish-dev1 --replicas=0
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE scale deployment ufsm-glassfish-dev1 --replicas=1
   environment:
-    name: develop
+    name: knowledge-base
     url: http://${CNAME}
 
 
