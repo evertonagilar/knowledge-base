@@ -13,8 +13,9 @@ deploy site:
   script:
     - mkdir -p /root/.kube
     - cat "$KUBECTL_CONFIG" > /root/.kube/config
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE scale deployment ufsm-glassfish-dev1 --replicas=0
-    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE scale deployment ufsm-glassfish-dev1 --replicas=1
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE scale deployment knowledge-base --replicas=0
+    - sleep 10
+    - /var/opt/kubectl --namespace=$KUBECTL_NAMESPACE scale deployment knowledge-base --replicas=1
   environment:
     name: knowledge-base
     url: http://${CNAME}
