@@ -1,4 +1,8 @@
 cd /var/opt/knowledge-base
 git pull
-echo "Atualizado!"
+sleep 15
+git pull
+sleep 15
+git pull
+sleep 15
 
