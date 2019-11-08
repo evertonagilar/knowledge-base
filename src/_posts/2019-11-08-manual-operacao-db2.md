@@ -1,6 +1,6 @@
 ---
 date: 2017-01-16
-title: Básico do GitLab
+title: Manual de operação do DB2 do CPD
 categories:
   - Banco de dados
 description: "Manual de operação do DB2 do CPD"
