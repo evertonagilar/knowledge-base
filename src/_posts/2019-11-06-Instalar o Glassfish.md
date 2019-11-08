@@ -9,7 +9,7 @@ type: Document
 
 Manual de instalação do Glassfish do CPD
 
-<a target="_blank" href="https://alpha.cpd.ufsm.br/desenvolvimento/knowledge-base-doc/blob/master/files/Documenta%C3%A7%C3%A3oDB2.pdf">Link do manual de instalação</a>
+<a target="_blank" href="https://alpha.cpd.ufsm.br/desenvolvimento/knowledge-base-doc/blob/master/files/tutorial_gf.pdf">Link do manual de instalação</a>
 
 
 
