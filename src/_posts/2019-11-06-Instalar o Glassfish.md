@@ -7,6 +7,6 @@ description: "Como instalar o Glassfish"
 type: Document
 ---
 
-A instalação do Glassfish vai ser documentada em breve.
+A instalação do servidor Glassfish ainda nao foi documentada aqui.
 
 
