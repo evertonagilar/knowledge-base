@@ -6,7 +6,11 @@ categories:
 description: "Como criar um post na base de conhecimento"
 type: Document
 ---
-Para criar um novo post na base de conhecimento, é preciso apenas criar um novo arquivo com a extensão .md na pasta src/_posts do projeto https://alpha.cpd.ufsm.br/desenvolvimento/knowledge-base que está no GitLab.
+Para incluir um novo post na base de conhecimento, crie um novo arquivo com a extensão .md no projeto https://alpha.cpd.ufsm.br/desenvolvimento/knowledge-base-doc que está no GitLab.
 
-Dica: Copie e cole um arquivo existente e use como template para o novo post. Após o commit do post, aguarde 1 minuto para aparecer no portal da base de conhecimento.
+Dica: Copie e cole um arquivo existente e use como template para o novo post. Após o commit e o push do post, aguarde 1 minuto para aparecer no portal da base de conhecimento.
+
+Obs.: O nome do arquivo deve ter o seguinte formato: yyyy-mm-dd-nome-post.md
+
+Exemplos: 2019-11-07-criar-post.md
 
