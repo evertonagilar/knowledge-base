@@ -3,8 +3,7 @@ date: 2017-01-16
 title: Básico do GitLab
 categories:
   - Desenvolvimento
-  - Java
-description: "Comandos básicos do GitLab para uso no setor de desenvolvimento"
+description: "Comandos básicos do *GitLab* para uso no setor de desenvolvimento"
 type: Document
 ---
 Existe um material vasto de tutoriais de git na Internet, segue alguns selecionados:
