@@ -1,4 +1,4 @@
-# Base de conhecimento CPD/UFSM <img src="https://pbs.twimg.com/profile_images/2600078255/cpd.png" />
+# Base de conhecimento CPD/UFSM <img width="90" height="80" src="https://pbs.twimg.com/profile_images/2600078255/cpd.png" />
 
 Este projeto consiste em um repositório de artigos documentando algumas atividades importantes do CPD.
 
