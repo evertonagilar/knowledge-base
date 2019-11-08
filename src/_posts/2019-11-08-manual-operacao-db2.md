@@ -2,7 +2,7 @@
 date: 2017-01-16
 title: Manual de operação do DB2 do CPD
 categories:
-  - Banco de dados
+  - Database
 description: "Manual de operação do DB2 do CPD"
 type: Document
 ---
