@@ -17,8 +17,8 @@ Link download: https://www.oracle.com/technetwork/pt/java/javase/downloads
 
 ~~~ bash
 cd /opt
-  tar xzvf /tmp/jdk-8u231-linux-x64.tar.gz
-  chown -R root:root jdk1.8.0_231/
+tar xzvf /tmp/jdk-8u231-linux-x64.tar.gz
+chown -R root:root jdk1.8.0_231/
 ~~~
 
 
